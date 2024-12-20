@@ -1,0 +1,28 @@
+# Creating the JSON data as provided
+
+token_data = {
+    "address": "TPDd5sNDF8wVA5y88BUXiPPT15Qn7e8Wku",
+    "symbol": "Mytoken",
+    "name": "Gocha Coin",
+    "decimals": 6,
+    "logoURI": "https://cryptologos.cc/logos/tether-usdt-logo.svg?v=040",
+    "homepage": "https://coinmarketcap.com/currencies/tether/",
+    "MarketCapLink": "https://coinmarketcap.com/currencies/tether/",
+    "existingMarkets": [
+        {
+            "source": "JustSwap",
+            "pairs": [
+                "Mytoken/USDT"
+            ]
+        }
+    ]
+}
+
+# Saving the data to a JSON file
+import json
+
+file_path = "/mnt/data/gocha_coin_token_data.json"
+with open(file_path, "w") as json_file:
+    json.dump(token_data, json_file, indent=4)
+
+file_path  # Returning the path to the file
